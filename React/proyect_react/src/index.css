@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap");
+ 
+.ficha {
+  --navy: #16324f;
+  --navy-dark: #0e2238;
+  --gold: #b98b34;
+  --ink: #223142;
+  --line: #c7d1dc;
+  --bg: #eef1f6;
+  --white: #ffffff;
+ 
+  max-width: 720px;
+  margin: 32px auto;
+  background: var(--white);
+  border: 1px solid var(--line);
+  font-family: "Inter", sans-serif;
+  color: var(--ink);
+}
+ 
+.ficha-header {
+  background: var(--navy);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px;
+}
+ 
+.ficha-sello {
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+ 
+.ficha-header h1 {
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+}
+ 
+.ficha-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+  padding: 28px 24px;
+  background: var(--bg);
+}
+ 
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+ 
+.campo-ancho {
+  grid-column: 1 / -1;
+}
+ 
+.campo label {
+  font-size: 0.85rem;
+  color: var(--navy-dark);
+  font-weight: 500;
+}
+ 
+.campo input,
+.campo select {
+  border: 1px solid var(--line);
+  background: var(--white);
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+ 
+.campo input:focus,
+.campo select:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+ 
+.ficha-acciones {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+ 
+.ficha-acciones button {
+  border: 1px solid var(--navy);
+  background: var(--navy);
+  color: var(--white);
+  padding: 9px 18px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+ 
+.ficha-acciones button:disabled {
+  background: var(--white);
+  color: var(--line);
+  border-color: var(--line);
+  cursor: default;
+}
+ 
+.ficha-acciones .boton-eliminar {
+  border-color: var(--gold);
+  background: var(--white);
+  color: var(--gold);
+}
+ 
+.ficha-subtitulo {
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--navy);
+  padding: 20px 24px 0;
+  margin: 0;
+}
+ 
+.ficha-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0 24px;
+  font-size: 0.9rem;
+}
+ 
+.ficha-tabla th {
+  background: var(--navy);
+  color: var(--white);
+  font-weight: 500;
+  text-align: left;
+  padding: 8px 12px;
+}
+ 
+.ficha-tabla td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+}
+ 
+.ficha-tabla tbody tr:hover {
+  background: var(--bg);
+}
+ 
+.ficha-tabla button {
+  border: none;
+  background: none;
+  color: var(--navy);
+  font-size: 0.85rem;
+  margin-right: 10px;
+  cursor: pointer;
+  padding: 0;
+}
+ 
+.ficha-tabla button.boton-eliminar {
+  color: var(--gold);
+}
+ 
+@media (max-width: 560px) {
+  .ficha-form {
+    grid-template-columns: 1fr;
+  }
+}
